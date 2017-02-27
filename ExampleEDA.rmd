@@ -40,7 +40,7 @@ There are many different kinds of data files in the world. Each one has its own 
 As with most reading in file commands, inside the parentheses needs to go a piece of text, in quotes, that is the path to the file from the working directory (the working directory is the folder that R is currently paying attention to). The easiest way to get a R Markdown (Rmd) Document and console cooperating about this is to place the file with the data in it in the same folder as the R Markdown (Rmd) Document, open the R Markdown (Rmd) document in RStudio so we are looking at the contents of the document in the editing window, then in the RStudio Session menu, use the __Set Working Directory - To Source File Location__ command to make a common starting point. Then the code in the R Markdown (Rmd) document will use the same working space regardless of whether we knit the document or run code chunks in the Console. In this case, if the `nzes2011.RData` file is in the same folder as the R Markdown (Rmd) document, hence it can be read into R with the following command:
 
 ```{r get_the_data}
-load("selected_nzes2011.Rdata")
+load("~/selected_nzes2011.Rdata")
 ```
 
 We also want to load packages that have functions in them we want to use. For this particular analysis we will only need the `dplyr` package, but for your project you will also likely need other packages as well, e.g. `ggplot2`.
